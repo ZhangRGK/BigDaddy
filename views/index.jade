@@ -1,0 +1,42 @@
+html
+    head
+        title BigDaddy is watching you...
+        link(rel="stylesheet",href="/bootstrap/css/bootstrap.min.css")
+        meta(name="viewport",content="width=device-width,initial-scale=1.0")
+    body
+        header.navbar.navbar-default.navbar-fixed-top
+            .container
+                .navbar-header
+                    button.navbar-toggle(type="button",data-toggle="collapse",data-target=".bd_datetimepicker")
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='#') BigDaddy
+                .collapse.navbar-collapse.bd_datetimepicker
+                    form.navbar-form
+                        .form-group
+                            input.form-control(id="start_date",type="date",placeholder="yyyy-mm-dd")
+        .container(style="padding-top:60px")
+            .alert.alert-danger.hidden
+            .col-xs-12.col-sm-6.col-md-4.col-lg-4
+                table.table.table-hover
+                    thead
+                        tr
+                            td &nbsp;
+                            td 当天
+                    tbody(id="first")
+            .col-sm-6.col-md-4.col-lg-4.visible-sm.visible-md.visible-lg
+                table.table.table-hover
+                    thead
+                        tr
+                            td 后一天
+                    tbody(id="second")
+            .col-md-4.col-lg-4.visible-md.visible-lg
+                table.table.table-hover
+                    thead
+                        tr
+                            td 后两天
+                    tbody(id="third")
+        script(src="/javascripts/lib/jquery-1.11.0.js")
+        script(src="/bootstrap/js/bootstrap.min.js")
+        script(src="javascripts/index.js")
