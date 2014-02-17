@@ -18,25 +18,18 @@ html
                             input.form-control(id="start_date",type="date",placeholder="yyyy-mm-dd")
         .container(style="padding-top:60px")
             .alert.alert-danger.hidden
-            .col-xs-12.col-sm-6.col-md-4.col-lg-4
-                table.table.table-hover
-                    thead
-                        tr
-                            td &nbsp;
-                            td 当天
-                    tbody(id="first")
-            .col-sm-6.col-md-4.col-lg-4.visible-sm.visible-md.visible-lg
-                table.table.table-hover
-                    thead
-                        tr
-                            td 后一天
-                    tbody(id="second")
-            .col-md-4.col-lg-4.visible-md.visible-lg
-                table.table.table-hover
-                    thead
-                        tr
-                            td 后两天
-                    tbody(id="third")
+            table.table.table-hover
+                thead
+                    tr
+                        td &nbsp;
+                        td.firstDay 第一天
+                        td.secondDay.visible-sm.visible-md.visible-lg 第二天
+                        td.thirdDay.visible-sm.visible-md.visible-lg 第三天
+                        td.fourthDay.visible-md.visible-lg 第四天
+                        td.fifthDay.visible-md.visible-lg 第五天
+                        td.sixthDay.visible-lg 第六天
+                        td.seventhDay.visible-lg 第七天
+                tbody(id="content")
         script(src="/javascripts/lib/jquery-1.11.0.js")
         script(src="/bootstrap/js/bootstrap.min.js")
         script(src="javascripts/index.js")
