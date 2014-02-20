@@ -19,7 +19,7 @@ $(function () {
                     $("#content").empty();
                     return false;
                 }
-                $.post("/getPlan", {"date": date})
+                $.post("/loadPlan", {"date": date})
                     .done(loadPlan).fail(function () {
                         $(".alert-danger").html("出错啦！快去看看日志！").removeClass("hidden");
                     });
